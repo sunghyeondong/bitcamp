@@ -36,12 +36,29 @@ public class Test01 {
         a = keyScan.nextInt();
         System.out.print("영어? ");
         b = keyScan.nextInt();
+        // 이전에 국어 점수를 입력받을 때 들어온 코드는 nextInt() 메서드에서 버린다.
         System.out.print("수학? ");
         c = keyScan.nextInt();
 
         int sum = a + b + c;
         float mean = sum / 3.0f;
 
+        System.out.println("-----------------------------------");
         System.out.println(name + " " + a + " " + b + " " + c + " " + sum + " " + mean);
     }
 }
+
+
+/**
+ * package step02.assignment;
+ * 
+ * public class Test01 {
+ *      public static void main(String[] args) {
+ *      
+ *      java.io.InputStream keyboard = System.in;
+        java.util.Scanner keyScan = new java.util.Scanner(keyboard);
+
+
+ * }
+ * }
+ */

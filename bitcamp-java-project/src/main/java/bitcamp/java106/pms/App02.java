@@ -27,7 +27,8 @@ package bitcamp.java106.pms;
 public class App02 {
     public static void main(String[] args) {
 
-        String a1, a2, a3, a4, a5;
+        String a1, a2, a4, a5;
+        int a3;
 
         java.io.InputStream keyboard = System.in;
         java.util.Scanner keyScan = new java.util.Scanner(keyboard);
@@ -36,8 +37,13 @@ public class App02 {
         a1 = keyScan.nextLine();
         System.out.print("설명? ");
         a2 = keyScan.nextLine();
+        
         System.out.print("최대인원? ");
-        a3 = keyScan.nextLine();
+        a3 = keyScan.nextInt();
+        keyScan.nextLine(); // 숫자 뒤에 줄바꿈 코드를 읽는다.
+                            // 읽고 난 뒤에 아무것도 안하기 떄문에
+                            // 일종의 줄바꿈 코드를 제거하는 효과가 있다.
+
         System.out.print("시작일? ");
         a4 = keyScan.nextLine();
         System.out.print("종료일? ");
