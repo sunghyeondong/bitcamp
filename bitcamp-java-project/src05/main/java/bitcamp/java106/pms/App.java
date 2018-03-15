@@ -5,6 +5,9 @@ import bitcamp.java106.pms.domain.Team;
 import bitcamp.java106.pms.domain.Member;
 import java.util.Scanner;
 
+// ver 0.4 - quit 명령어를 입력 받는 코드를 메서드로 분리한다.
+// ver 0.3 - quit 명령어를 입력 받는 코드를 메서드로 분리한다. 
+// ver 0.2 - quit 명령어를 처리하는 코드를 메서드로 분리한다. 
 // ver 0.1 - 명령어를 입력 받는 코드를 메서드로 분리한다. 
 public class App {
     
@@ -97,14 +100,6 @@ public class App {
         }  
     }
 
-    static void onTeamUpdate() {
-
-    }
-
-    static void onTeamDelete() {
-
-    }
-
     static void onMemberAdd() {
         System.out.println("[회원 정보 입력]");
         Member member = new Member();
@@ -155,14 +150,6 @@ public class App {
         }     
     }
 
-    static void onMemberUpdate() {
-
-    }
-
-    static void onMemberDelete() {
-        
-    }
-
     public static void main(String[] args) {
         
 
@@ -187,10 +174,6 @@ public class App {
                 onTeamList();
             } else if (menu.equals("team/view")) {
                 onTeamView();
-            } else if (menu.equals("team/view")) {
-                onTeamUpdate();
-            } else if (menu.equals("team/view")) {
-                onTeamDelete();
             } else if (menu.equals("member/add")) {
                 onMemberAdd();
             } else if (menu.equals("member/list")) {
