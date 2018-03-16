@@ -5,10 +5,11 @@ import bitcamp.java106.pms.domain.Team;
 import bitcamp.java106.pms.domain.Member;
 import java.util.Scanner;
 
-// ver 0.2 - quit 명령어를 입력 받는 코드를 메서드로 분리한다. 
-// ver 0.1 - 명령어를 입력 받는 코드를 메서드로 분리한다. 
+// ver 0.2 - quit 명령어를 처리하는 코드를 메서드로 분리한다.
+// ver 0.1 - 명령어를 입력 받는 코드를 메서드로 분리한다.
 public class App {
-
+    // 클래스 변수 = 스태틱 변수
+    // => 클래스 안에서 어디에서나 사용할 수 있는 변수이다.
     static Scanner keyScan = new Scanner(System.in);
 
     static String[] prompt() {
@@ -17,12 +18,10 @@ public class App {
     }
 
     static void onQuit() {
-        System.out.println("안녕히 가세요!");        
+        System.out.println("안녕히 가세요!");
     }
 
     public static void main(String[] args) {
-        
-
         Team[] teams = new Team[1000];
         int teamIndex = 0;
 
@@ -111,7 +110,7 @@ public class App {
             } else if (menu.equals("member/add")) {
                 System.out.println("[회원 정보 입력]");
                 Member member = new Member();
-
+                
                 System.out.print("아이디? ");
                 member.id = keyScan.nextLine();
 

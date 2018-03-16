@@ -5,11 +5,12 @@ import bitcamp.java106.pms.domain.Team;
 import bitcamp.java106.pms.domain.Member;
 import java.util.Scanner;
 
-// ver 0.2 - quit 명령어를 입력 받는 코드를 메서드로 분리한다. 
-// ver 0.2 - quit 명령어를 처리하는 코드를 메서드로 분리한다. 
-// ver 0.1 - 명령어를 입력 받는 코드를 메서드로 분리한다. 
+// ver 0.3 - help 명령어를 처리하는 코드를 메서드로 분리한다.
+// ver 0.2 - quit 명령어를 처리하는 코드를 메서드로 분리한다.
+// ver 0.1 - 명령어를 입력 받는 코드를 메서드로 분리한다.
 public class App {
-
+    // 클래스 변수 = 스태틱 변수
+    // => 클래스 안에서 어디에서나 사용할 수 있는 변수이다.
     static Scanner keyScan = new Scanner(System.in);
 
     static String[] prompt() {
@@ -18,7 +19,7 @@ public class App {
     }
 
     static void onQuit() {
-        System.out.println("안녕히 가세요!");        
+        System.out.println("안녕히 가세요!");
     }
 
     static void onHelp() {
@@ -29,12 +30,10 @@ public class App {
         System.out.println("회원 등록 명령 : member/add");
         System.out.println("회원 조회 명령 : member/list");
         System.out.println("회원 상세조회 명령 : member/view 아이디");
-        System.out.println("종료 : quit");        
+        System.out.println("종료 : quit");
     }
 
     public static void main(String[] args) {
-        
-
         Team[] teams = new Team[1000];
         int teamIndex = 0;
 
@@ -55,7 +54,6 @@ public class App {
                 break;
             } else if (menu.equals("help")) {
                 onHelp();
-                
             } else if (menu.equals("team/add")) {
                 System.out.println("[팀 정보 입력]");
                 Team team = new Team();
@@ -116,7 +114,7 @@ public class App {
             } else if (menu.equals("member/add")) {
                 System.out.println("[회원 정보 입력]");
                 Member member = new Member();
-
+                
                 System.out.print("아이디? ");
                 member.id = keyScan.nextLine();
 
