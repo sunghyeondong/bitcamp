@@ -1,9 +1,9 @@
 package bitcamp.java106.pms;
 
-
-import bitcamp.java106.pms.domain.Team;
-import bitcamp.java106.pms.domain.Member;
 import java.util.Scanner;
+
+import bitcamp.java106.pms.domain.Member;
+import bitcamp.java106.pms.domain.Team;
 
 // ver 0.1 - 팀명으로 배열에서 팀 정보를 찾는 코드를 함수로 분리한다.
 public class App {
