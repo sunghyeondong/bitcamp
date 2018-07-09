@@ -3,7 +3,7 @@ package step07;
 
 import step07.Calculator;
 
-public class Exam01_2 {
+public class ExamY_1 {
  public static void main(String[] args) {
      int result = 0;
      
