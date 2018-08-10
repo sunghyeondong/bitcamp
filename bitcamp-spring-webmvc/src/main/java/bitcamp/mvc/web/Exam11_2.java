@@ -118,7 +118,7 @@ public class Exam11_2 {
             files.transferTo(path);
             
             // 썸네일 이미지 생성
-            Thumbnails.of(path).size(50, 50).toFile(thumbnailPath);
+            //Thumbnails.of(path).size(50, 50).toFile(thumbnailPath);
             
         } catch (Exception e) {
             e.printStackTrace();
